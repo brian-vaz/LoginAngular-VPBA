@@ -1,0 +1,31 @@
+<div class="margen"><h1 align="center">Login</h1></div>
+<div>
+  <mat-form-field class="full-width margen">
+    <mat-label>Usuario</mat-label>
+    <input matInput />
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="full-width">
+    <mat-label>Contraseña</mat-label>
+    <input matInput [type]="hide() ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="clickEvent($event)"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide()"
+    >
+      <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<mat-checkbox [checked]="ocultar()" (change)="mostrar()">
+  Recordarme
+</mat-checkbox>
+<div>
+  <button mat-flat-button class="full-width">Ingresar</button>
+</div>
+<div class="margen-bot" align="center">
+  <a mat-button href="#" target="_blank">¿Olvidaste la contraseña?</a>
+</div>

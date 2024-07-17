@@ -1,0 +1,14 @@
+.full-width{
+    min-width: 500px;
+    max-width: 700px;
+    width: 100%;
+  }
+  
+  .margen{
+    margin-top: 2rem;
+  }
+  
+  .margen-bot{
+    margin-bottom: 2rem;
+  }
+  
